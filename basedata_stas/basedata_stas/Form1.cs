@@ -60,10 +60,21 @@ namespace basedata_stas
         private void button3_Click(object sender, EventArgs e)
         {
             //open file
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "d:\\";
+            openFileDialog1.Filter = "Base files (*.bs)|*.bs|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+
             string line;
             int succesBooksParsed = 0;
             int failedBooksParsed = 0;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"d:\test.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog1.FileName);
             books.Clear();
             while ((line = file.ReadLine()) != null)
             {
@@ -86,12 +97,23 @@ namespace basedata_stas
             }
             toolStripStatusLabel1.Text = "Loaded " + Convert.ToString(succesBooksParsed) + " and " + Convert.ToString(failedBooksParsed) + " Failed";
             file.Close();
+            //*/
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             int counter = 0;
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"d:\test.txt");
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "Base files (*.bs)|*.bs|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName);
             foreach(Book book in books)
             {
                 file.WriteLine(book.Title + ',' + book.Author + ',' +  book.PublicationYear + ',' + book.BookPublisherName + ',' + book.Price + ',' + book.Condition + ',' + book.IssueDate);
