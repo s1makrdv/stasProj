@@ -1,4 +1,4 @@
-﻿namespace basedata_stas
+﻿namespace basedata_13
 {
     partial class Form1
     {
