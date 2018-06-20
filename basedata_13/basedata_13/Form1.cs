@@ -17,12 +17,24 @@ namespace basedata_13
     {
         private static List<Passenger> passengers = new List<Passenger>();
 
-        public Form1(){ InitializeComponent();}
-        private void Form1_Load(object sender, EventArgs e){}
-        private void groupBox1_Enter(object sender, EventArgs e){}
-        private void label3_Click(object sender, EventArgs e){}
+        public Form1() { InitializeComponent(); }
+        private void Form1_Load(object sender, EventArgs e) { }
+        private void groupBox1_Enter(object sender, EventArgs e) { }
+        private void label3_Click(object sender, EventArgs e) { }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            if (firstNameBox.Text == "" ||
+                lastNameBox.Text == "" ||
+                middleNameBox.Text == "" ||
+                Convert.ToInt32(flightNumberBox.Text) <= 0 ||
+                Convert.ToInt32(flightNumberBox.Text) <= 0 ||
+                Convert.ToInt32(flightNumberBox.Text) <= 0 ||
+                Convert.ToInt32(flightNumberBox.Text) <= 0 )
+            {
+                MessageBox.Show("Check passenger fields", "Error detected in input", 0);
+                return;
+            }
             passengers.Add(new Passenger(firstNameBox.Text,
                                          lastNameBox.Text,
                                          middleNameBox.Text,
@@ -31,10 +43,16 @@ namespace basedata_13
                                          Convert.ToInt32(luggagePiecesNumBox.Text),
                                          Convert.ToInt32(totalBaggageWeightBox.Text)));
 
-            button2_Click(this, System.EventArgs.Empty);
+            //button2_Click(this, System.EventArgs.Empty);
+            updateDataGrid();
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            updateDataGrid();
+        }
+
+        private void updateDataGrid()
         {
             dataGridView1.Rows.Clear();
             foreach (Passenger passenger in passengers)
@@ -42,9 +60,9 @@ namespace basedata_13
                 dataGridView1.Rows.Add(passenger.FirstName,
                                        passenger.LastName,
                                        passenger.MiddleName,
-                                       passenger.FlightNumber, 
-                                       passenger.BaggageReceiptNumber, 
-                                       passenger.LuggagePiecesNumber, 
+                                       passenger.FlightNumber,
+                                       passenger.BaggageReceiptNumber,
+                                       passenger.LuggagePiecesNumber,
                                        passenger.TotalBaggageWeight);
             }
         }
@@ -90,7 +108,7 @@ namespace basedata_13
             }
             toolStripStatusLabel1.Text = "Loaded " + Convert.ToString(succesPassengersParsed) + " and " + Convert.ToString(failedPassengersParsed) + " Failed";
             file.Close();
-            button2_Click(this,System.EventArgs.Empty);
+            updateDataGrid();//button2_Click(this,System.EventArgs.Empty);
             //*/
         }
 
@@ -140,7 +158,8 @@ namespace basedata_13
             foundedFlightBox.Text = "";
             if (findBaggageBox.Text == "")
             {
-                baggageReceiptNumBox.Text = "Input Error!";
+                //baggageReceiptNumBox.Text = "Input Error!";
+                MessageBox.Show("Input Error!", "Error detected in input", 0);
                 return;
             }
 
@@ -165,6 +184,7 @@ namespace basedata_13
         {
             if(findLastNameBox.Text == "")
             {
+                MessageBox.Show("Input Error!", "Error detected in input", 0);
                 toolStripStatusLabel1.Text = "Input Error!";
                 return;
             }
@@ -181,7 +201,7 @@ namespace basedata_13
                     toolStripStatusLabel1.Text = "Not Found!";
                 }
             }
-            button2_Click(this, System.EventArgs.Empty);
+            updateDataGrid(); //button2_Click(this, System.EventArgs.Empty);
         }
 
         
@@ -210,6 +230,25 @@ namespace basedata_13
         private void label12_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Select row in table to delete!", "Table error!", 0);
+                return;
+            }
+            if (passengers.Count > 0)
+            {
+                passengers.Remove(passengers[dataGridView1.CurrentRow.Index]);
+            }
+            else
+            {
+                MessageBox.Show("Base is empty!", "Deleting error!", 0);
+            }
+
+            updateDataGrid();
         }
     }
 }

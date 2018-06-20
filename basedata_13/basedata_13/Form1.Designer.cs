@@ -28,10 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.middleNameBox = new System.Windows.Forms.TextBox();
+            this.lastNameBox = new System.Windows.Forms.TextBox();
+            this.addNewPassengerButton = new System.Windows.Forms.Button();
             this.totalBaggageWeightBox = new System.Windows.Forms.TextBox();
             this.luggagePiecesNumBox = new System.Windows.Forms.TextBox();
             this.flightNumberBox = new System.Windows.Forms.TextBox();
@@ -43,37 +55,31 @@
             this.firstNameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.updateTableButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.openFileButton = new System.Windows.Forms.Button();
+            this.saveFileButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.sumWeightBox = new System.Windows.Forms.TextBox();
             this.findBaggageBox = new System.Windows.Forms.TextBox();
             this.findBaggageButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.foundedFlightBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.foundedFlightBox = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.findLastNameBox = new System.Windows.Forms.TextBox();
+            this.deleteByLastNameButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.lastNameBox = new System.Windows.Forms.TextBox();
-            this.middleNameBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button6 = new System.Windows.Forms.Button();
+            this.findLastNameBox = new System.Windows.Forms.TextBox();
+            this.detectHeavyWeightButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.deleteRowTableButton = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -81,6 +87,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -88,14 +95,14 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.firstName,
@@ -108,9 +115,59 @@
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridView1.Location = new System.Drawing.Point(16, 21);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(702, 248);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(729, 248);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
+            // 
+            // firstName
+            // 
+            this.firstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.firstName.HeaderText = "First Name";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            // 
+            // lastName
+            // 
+            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            // 
+            // middleName
+            // 
+            this.middleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.middleName.HeaderText = "Middle Name";
+            this.middleName.Name = "middleName";
+            this.middleName.ReadOnly = true;
+            // 
+            // Author
+            // 
+            this.Author.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Author.HeaderText = "Flights";
+            this.Author.Name = "Author";
+            this.Author.Width = 62;
+            // 
+            // Year
+            // 
+            this.Year.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Year.HeaderText = "Receipt";
+            this.Year.Name = "Year";
+            this.Year.Width = 69;
+            // 
+            // Publisher
+            // 
+            this.Publisher.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Publisher.HeaderText = "Luggage";
+            this.Publisher.Name = "Publisher";
+            this.Publisher.Width = 74;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Price.HeaderText = "Total Weight";
+            this.Price.Name = "Price";
+            this.Price.Width = 93;
             // 
             // groupBox1
             // 
@@ -119,7 +176,7 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.middleNameBox);
             this.groupBox1.Controls.Add(this.lastNameBox);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.addNewPassengerButton);
             this.groupBox1.Controls.Add(this.totalBaggageWeightBox);
             this.groupBox1.Controls.Add(this.luggagePiecesNumBox);
             this.groupBox1.Controls.Add(this.flightNumberBox);
@@ -130,24 +187,60 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.firstNameBox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(268, 284);
+            this.groupBox1.Size = new System.Drawing.Size(268, 328);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add new passenger";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // label11
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(14, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(237, 30);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(11, 73);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 16);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Middle Name";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(11, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 16);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Last Name";
+            // 
+            // middleNameBox
+            // 
+            this.middleNameBox.Location = new System.Drawing.Point(119, 72);
+            this.middleNameBox.Name = "middleNameBox";
+            this.middleNameBox.Size = new System.Drawing.Size(132, 20);
+            this.middleNameBox.TabIndex = 13;
+            this.middleNameBox.Text = "Default name";
+            // 
+            // lastNameBox
+            // 
+            this.lastNameBox.Location = new System.Drawing.Point(119, 46);
+            this.lastNameBox.Name = "lastNameBox";
+            this.lastNameBox.Size = new System.Drawing.Size(132, 20);
+            this.lastNameBox.TabIndex = 12;
+            this.lastNameBox.Text = "Default name";
+            // 
+            // addNewPassengerButton
+            // 
+            this.addNewPassengerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addNewPassengerButton.Location = new System.Drawing.Point(14, 230);
+            this.addNewPassengerButton.Name = "addNewPassengerButton";
+            this.addNewPassengerButton.Size = new System.Drawing.Size(237, 30);
+            this.addNewPassengerButton.TabIndex = 1;
+            this.addNewPassengerButton.Text = "Add";
+            this.addNewPassengerButton.UseVisualStyleBackColor = true;
+            this.addNewPassengerButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // totalBaggageWeightBox
             // 
@@ -242,30 +335,32 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.deleteRowTableButton);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(313, 12);
+            this.groupBox2.Controls.Add(this.updateTableButton);
+            this.groupBox2.Location = new System.Drawing.Point(286, 29);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(735, 284);
+            this.groupBox2.Size = new System.Drawing.Size(762, 328);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Passengers list";
             // 
-            // button2
+            // updateTableButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(828, 465);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 28);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "UPDATE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.updateTableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.updateTableButton.Location = new System.Drawing.Point(481, 282);
+            this.updateTableButton.Name = "updateTableButton";
+            this.updateTableButton.Size = new System.Drawing.Size(107, 30);
+            this.updateTableButton.TabIndex = 14;
+            this.updateTableButton.Text = "Update";
+            this.updateTableButton.UseVisualStyleBackColor = true;
+            this.updateTableButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 507);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 595);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1060, 22);
             this.statusStrip1.TabIndex = 4;
@@ -277,33 +372,33 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel1.Text = "Status";
             // 
-            // button3
+            // openFileButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(715, 465);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 28);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Load File";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.openFileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.openFileButton.Location = new System.Drawing.Point(819, 569);
+            this.openFileButton.Name = "openFileButton";
+            this.openFileButton.Size = new System.Drawing.Size(107, 28);
+            this.openFileButton.TabIndex = 15;
+            this.openFileButton.Text = "Open File";
+            this.openFileButton.UseVisualStyleBackColor = true;
+            this.openFileButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // saveFileButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(941, 465);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 28);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Save";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.saveFileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveFileButton.Location = new System.Drawing.Point(941, 569);
+            this.saveFileButton.Name = "saveFileButton";
+            this.saveFileButton.Size = new System.Drawing.Size(107, 28);
+            this.saveFileButton.TabIndex = 16;
+            this.saveFileButton.Text = "Save";
+            this.saveFileButton.UseVisualStyleBackColor = true;
+            this.saveFileButton.Click += new System.EventHandler(this.button4_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(809, 301);
+            this.label6.Location = new System.Drawing.Point(792, 477);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(181, 18);
             this.label6.TabIndex = 17;
@@ -311,7 +406,7 @@
             // 
             // sumWeightBox
             // 
-            this.sumWeightBox.Location = new System.Drawing.Point(995, 302);
+            this.sumWeightBox.Location = new System.Drawing.Point(978, 478);
             this.sumWeightBox.Name = "sumWeightBox";
             this.sumWeightBox.Size = new System.Drawing.Size(53, 20);
             this.sumWeightBox.TabIndex = 12;
@@ -354,20 +449,12 @@
             this.groupBox3.Controls.Add(this.findBaggageBox);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.findBaggageButton);
-            this.groupBox3.Location = new System.Drawing.Point(12, 305);
+            this.groupBox3.Location = new System.Drawing.Point(12, 358);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(417, 89);
+            this.groupBox3.Size = new System.Drawing.Size(417, 94);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Find baggage";
-            // 
-            // foundedFlightBox
-            // 
-            this.foundedFlightBox.Location = new System.Drawing.Point(251, 47);
-            this.foundedFlightBox.Name = "foundedFlightBox";
-            this.foundedFlightBox.Size = new System.Drawing.Size(157, 20);
-            this.foundedFlightBox.TabIndex = 21;
-            this.foundedFlightBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
             // 
@@ -379,24 +466,36 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Flight Number";
             // 
+            // foundedFlightBox
+            // 
+            this.foundedFlightBox.Location = new System.Drawing.Point(251, 47);
+            this.foundedFlightBox.Name = "foundedFlightBox";
+            this.foundedFlightBox.Size = new System.Drawing.Size(157, 20);
+            this.foundedFlightBox.TabIndex = 21;
+            this.foundedFlightBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button5);
+            this.groupBox4.Controls.Add(this.deleteByLastNameButton);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.findLastNameBox);
-            this.groupBox4.Location = new System.Drawing.Point(12, 400);
+            this.groupBox4.Location = new System.Drawing.Point(12, 458);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(417, 65);
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Delete passanger info by Last Name";
             // 
-            // findLastNameBox
+            // deleteByLastNameButton
             // 
-            this.findLastNameBox.Location = new System.Drawing.Point(85, 27);
-            this.findLastNameBox.Name = "findLastNameBox";
-            this.findLastNameBox.Size = new System.Drawing.Size(193, 20);
-            this.findLastNameBox.TabIndex = 22;
+            this.deleteByLastNameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteByLastNameButton.Location = new System.Drawing.Point(284, 20);
+            this.deleteByLastNameButton.Name = "deleteByLastNameButton";
+            this.deleteByLastNameButton.Size = new System.Drawing.Size(124, 30);
+            this.deleteByLastNameButton.TabIndex = 22;
+            this.deleteByLastNameButton.Text = "Delete";
+            this.deleteByLastNameButton.UseVisualStyleBackColor = true;
+            this.deleteByLastNameButton.Click += new System.EventHandler(this.button5_Click);
             // 
             // label9
             // 
@@ -408,120 +507,31 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Last name";
             // 
-            // button5
+            // findLastNameBox
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(284, 20);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 30);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.findLastNameBox.Location = new System.Drawing.Point(85, 27);
+            this.findLastNameBox.Name = "findLastNameBox";
+            this.findLastNameBox.Size = new System.Drawing.Size(193, 20);
+            this.findLastNameBox.TabIndex = 22;
             // 
-            // lastNameBox
+            // detectHeavyWeightButton
             // 
-            this.lastNameBox.Location = new System.Drawing.Point(119, 46);
-            this.lastNameBox.Name = "lastNameBox";
-            this.lastNameBox.Size = new System.Drawing.Size(132, 20);
-            this.lastNameBox.TabIndex = 12;
-            this.lastNameBox.Text = "Default name";
-            // 
-            // middleNameBox
-            // 
-            this.middleNameBox.Location = new System.Drawing.Point(119, 72);
-            this.middleNameBox.Name = "middleNameBox";
-            this.middleNameBox.Size = new System.Drawing.Size(132, 20);
-            this.middleNameBox.TabIndex = 13;
-            this.middleNameBox.Text = "Default name";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(11, 47);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 16);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Last Name";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(11, 73);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 16);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Middle Name";
-            // 
-            // firstName
-            // 
-            this.firstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            // 
-            // lastName
-            // 
-            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            // 
-            // middleName
-            // 
-            this.middleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.middleName.HeaderText = "Middle Name";
-            this.middleName.Name = "middleName";
-            this.middleName.ReadOnly = true;
-            // 
-            // Author
-            // 
-            this.Author.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Author.HeaderText = "Flights";
-            this.Author.Name = "Author";
-            this.Author.Width = 62;
-            // 
-            // Year
-            // 
-            this.Year.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Year.HeaderText = "Receipt";
-            this.Year.Name = "Year";
-            this.Year.Width = 69;
-            // 
-            // Publisher
-            // 
-            this.Publisher.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Publisher.HeaderText = "Luggage";
-            this.Publisher.Name = "Publisher";
-            this.Publisher.Width = 74;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Price.HeaderText = "Total Weight";
-            this.Price.Name = "Price";
-            this.Price.Width = 93;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(126, 61);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(125, 28);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "Detect";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.detectHeavyWeightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.detectHeavyWeightButton.Location = new System.Drawing.Point(77, 56);
+            this.detectHeavyWeightButton.Name = "detectHeavyWeightButton";
+            this.detectHeavyWeightButton.Size = new System.Drawing.Size(125, 28);
+            this.detectHeavyWeightButton.TabIndex = 23;
+            this.detectHeavyWeightButton.Text = "Detect";
+            this.detectHeavyWeightButton.UseVisualStyleBackColor = true;
+            this.detectHeavyWeightButton.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.button6);
-            this.groupBox5.Location = new System.Drawing.Point(435, 305);
+            this.groupBox5.Controls.Add(this.detectHeavyWeightButton);
+            this.groupBox5.Location = new System.Drawing.Point(435, 358);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(268, 104);
+            this.groupBox5.Size = new System.Drawing.Size(290, 104);
             this.groupBox5.TabIndex = 24;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Heavyweight detector";
@@ -537,21 +547,61 @@
             this.label12.Text = "Passengers with more than 30 kg baggage";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // deleteRowTableButton
+            // 
+            this.deleteRowTableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteRowTableButton.Location = new System.Drawing.Point(594, 282);
+            this.deleteRowTableButton.Name = "deleteRowTableButton";
+            this.deleteRowTableButton.Size = new System.Drawing.Size(124, 30);
+            this.deleteRowTableButton.TabIndex = 23;
+            this.deleteRowTableButton.Text = "Delete row";
+            this.deleteRowTableButton.UseVisualStyleBackColor = true;
+            this.deleteRowTableButton.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(113, 70);
+            this.contextMenuStrip1.Text = "File";
+            this.contextMenuStrip1.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.openToolStripMenuItem.Text = "Open...";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.saveToolStripMenuItem.Text = "Save...";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 529);
+            this.ClientSize = new System.Drawing.Size(1060, 617);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.sumWeightBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.saveFileButton);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.openFileButton);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
@@ -569,6 +619,7 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,7 +633,7 @@
         private System.Windows.Forms.TextBox firstNameBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addNewPassengerButton;
         private System.Windows.Forms.TextBox totalBaggageWeightBox;
         private System.Windows.Forms.TextBox luggagePiecesNumBox;
         private System.Windows.Forms.TextBox flightNumberBox;
@@ -590,11 +641,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button updateTableButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button openFileButton;
+        private System.Windows.Forms.Button saveFileButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox sumWeightBox;
         private System.Windows.Forms.TextBox findBaggageBox;
@@ -604,7 +655,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox foundedFlightBox;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button deleteByLastNameButton;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox findLastNameBox;
         private System.Windows.Forms.Label label11;
@@ -618,9 +669,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Year;
         private System.Windows.Forms.DataGridViewTextBoxColumn Publisher;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button detectHeavyWeightButton;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button deleteRowTableButton;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
