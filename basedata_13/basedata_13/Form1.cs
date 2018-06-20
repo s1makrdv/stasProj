@@ -106,7 +106,9 @@ namespace basedata_13
                     ++failedPassengersParsed;
                 }
             }
-            toolStripStatusLabel1.Text = "Loaded " + Convert.ToString(succesPassengersParsed) + " and " + Convert.ToString(failedPassengersParsed) + " Failed";
+            toolStripStatusLabel1.Text = "Loaded " + Convert.ToString(succesPassengersParsed) + 
+                                         " and " + Convert.ToString(failedPassengersParsed) + 
+                                         " Failed";
             file.Close();
             updateDataGrid();//button2_Click(this,System.EventArgs.Empty);
             //*/
@@ -156,7 +158,7 @@ namespace basedata_13
         private void findBaggageButton_Click(object sender, EventArgs e)
         {
             foundedFlightBox.Text = "";
-            if (findBaggageBox.Text == "")
+            if (findBaggageBox.Text == "" )
             {
                 //baggageReceiptNumBox.Text = "Input Error!";
                 MessageBox.Show("Input Error!", "Error detected in input", 0);
@@ -249,6 +251,28 @@ namespace basedata_13
             }
 
             updateDataGrid();
+        }
+
+        public static string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
+        }
+
+        public static string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
